@@ -1,0 +1,62 @@
+#signup-container
+{
+	opacity: 0;
+	background-image: url("/static/img/classroom.jpg");
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+	.transition(opacity 1s ease-in-out);
+	&.content-loaded
+	{
+		opacity: 1;
+	}
+	.signup-block
+	{
+		position: relative;
+		@media @desktop
+		{
+			height: 80vh;
+		}
+		#signup-form
+		{
+			background-color: rgba(47, 30, 30, 0.8);
+			padding: 20px;
+			border-radius: 4px;
+			@media @desktop
+			{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				.translate(-50%, -50%);
+				width: 95%;
+			}
+			label
+			{
+			    font-size: 20px;
+				color: #E6B7B7;
+			}
+			input
+			{
+				font-size: 18px;
+				color: #fff;
+			}
+			#signup-submit
+			{
+				background: none;
+				font-size: 28px;
+				border: none;
+				font-weight: lighter;
+				.smooth-transition(0.2s);
+				color: #399C00;
+				&:hover, &:focus
+				{
+					color: #AB2727;
+				}
+				&:focus
+				{
+					outline: 0;
+				}
+			}
+		}
+	}
+}

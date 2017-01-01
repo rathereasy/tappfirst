@@ -1,0 +1,31 @@
+{% extends "interfaceLayout.html" %}
+
+{% block title %}All rooms{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+	<h1>Welcome!</h1>
+	<p>This page contains all your previous quiz sets. To create a new quiz set, click on the Create new room button</p>
+	<p><a class="btn btn-primary btn-lg" href="newtable" role="button">Create a new room &raquo;</a></p>
+  </div>
+</div>
+<div class="container">
+	{% if rows.length != 0 %}
+	<div class="text-center"><h2> Previous rooms </h2></div>
+	<table class="table table-condensed">
+	  <thead><tr><th>Room number - Room name</th></tr></thead>
+	  <tbody>
+		{% for x in rows %}
+		<tr>
+		<td><a href="showtable?tableid={{x['objectId']}}"> {{ x['roomNumber'] }} -
+		{{ x['roomName'] }} </a> </td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	{% endif %}
+</div>
+
+{% endblock %}

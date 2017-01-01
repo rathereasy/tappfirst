@@ -1,0 +1,244 @@
+.navbar
+{
+	padding-bottom: 5px;
+	.box-shadow(none);
+	@media (min-width: 768px) and (max-width: 992px)
+	{
+		.navbar-nav>li>a 
+		{
+			padding-right: 8px;
+			padding-left: 8px;
+		}
+	}
+	&:not(.navbar-default) .navbar-collapse
+	{
+		@media @mobile
+		{
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
+	.navbar-collapse {
+		text-align: center;
+		.box-shadow(none);
+	}
+	.btn.btn-default.navbar-toggle
+	{
+		margin-top: 20px;
+		margin-right: 40px;
+	}
+	.navbar-brand
+	{
+		opacity: 0.8;
+		.smooth-transition(0.2s);
+		& > img
+		{
+			.smooth-transition(0.4s);
+			height: 45px;
+			padding-bottom: 5px;
+		}
+		&:focus, &:hover
+		{
+			opacity: 1;
+		}
+	}
+	.navbar-nav:not(.navbar-right) > li
+	{
+		& > a
+		{
+			color:white;
+			background-color: transparent;
+			.smooth-transition(0.2s);
+			&.active
+			{
+				@media @desktop
+				{
+					box-shadow: inset 0 -2px 0 0 white;
+					border-radius: 0px;
+					padding-bottom: 15px;
+				}
+				@media @mobile
+				{
+					.box-shadow(none);
+				}
+			}
+			&:focus, &:hover
+			{
+				@media @desktop
+				{
+					color:white;
+					border-radius: 0px;
+					background-color: transparent;
+					box-shadow: inset 0 -2px 0 0 white;
+					padding-bottom: 15px;
+				}
+				@media @mobile
+				{
+					color: #3D3E46;
+				}
+			}
+			@media @desktop
+			{
+				font-size: 15px;
+				&:active
+				{
+					background-image: none;
+					&:hover, &:focus
+					{
+						background-color: transparent;
+						color:white;
+					}
+				}
+			}
+		}
+	}
+	.navbar-nav.navbar-right > li
+	{
+		& > a
+		{
+			color:white;
+			background-color: transparent;
+			&:focus, &:hover
+			{
+				color: #422727;
+			}
+			@media @mobile
+			{
+				font-size: 13px;
+			}
+		}
+	}
+	.navbar-toggle
+	{
+		.icon-bar 
+		{
+			background-color: rgba(0,0,0,.5);
+			.smooth-transition(0.2s);
+		}
+		&:hover, &:focus
+		{
+			background-color: transparent;
+			.icon-bar 
+			{
+				background-color: rgb(255, 255, 255);
+			}
+		}
+	}
+	&.navbar-fixed-top
+	{
+		.transition(background-color 1s ease-in-out);
+	}
+	&.navbar-default
+	{
+		background-color: rgba(255,255,255,0.95);
+		.navbar-toggle
+		{
+			&:hover, &:focus
+			{
+				.icon-bar 
+				{
+					background-color: rgba(0,0,0,.5);
+				}
+			}
+		}
+		.navbar-nav:not(.navbar-right) > li
+		{
+			& > a
+			{
+				color: #3D3E46;
+				&:focus, &:hover
+				{
+					color: rgb(121, 38, 38);
+					@media @desktop
+					{
+						box-shadow: inset 0 -2px 0 0 black;
+						padding-bottom: 15px;
+					}
+				}
+				&.active
+				{
+					@media @desktop
+					{
+						box-shadow: inset 0 -2px 0 0 black;
+						padding-bottom: 15px;
+						border-radius: 0px;
+					}
+					@media @mobile
+					{
+						background-color: #eee;
+					}
+				}
+			}
+		}
+		.navbar-nav.navbar-right > li
+		{
+			& > a
+			{
+				color: #3D3E46;
+				.smooth-transition(0.2s);
+				&:focus, &:hover
+				{
+					color:#0D23DE;
+				}
+			}
+		}
+		&:after
+		{
+			left:0;
+			width:100%;
+		}
+	}
+	&:after
+	{
+		position:absolute;
+		bottom:0;
+		left:50%;
+		height:1px;
+		width:0%;
+		.box-shadow(0px 2px 1px 1px rgba(0, 0, 0, 0.15));
+		display:block;
+		.smooth-transition(1s);
+	}
+}
+
+#signInModal
+{
+	& > .modal-dialog
+	{
+		padding: 10px;
+		margin-top: 70px;
+		& > .modal-content
+		{
+			border-radius: 10px;
+			& > .modal-header
+			{
+				background-image: url('/static/img/school-texture.png');
+				border-top-right-radius: 10px;
+				border-top-left-radius: 10px;
+				& > button > span
+				{
+					color: #8A1E1E;
+				}
+				#signInModalLabel > img
+				{
+					max-width: 60%;
+				}
+			}
+			& > .modal-body .form-group input
+			{
+				color: black;
+			}
+		}
+	}
+	#signin-submit
+	{
+		margin-top: 15px;
+		padding: 12px 35px;
+		font-size: 18px;
+	}
+}
+
+.modal-open .navbar-fixed-top
+{
+	.smooth-transition(0s);
+	padding-right: 17px;
+}

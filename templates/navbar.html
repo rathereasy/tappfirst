@@ -1,0 +1,63 @@
+<nav id="tappfirst-navbar" class="navbar">
+  <div class="container">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	  <button type="button" class="btn btn-default navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="/index#intro"><img src="static/img/tappfirst_webpage.png" alt="Tappfirst"/></a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	  <ul class="nav navbar-nav">
+		<li><a href="/index#intro" id="intro-nav" class="btn btn-default">Home <span class="sr-only">(current)</span></a></li>
+		<li><a href="/index#testimonials" id="testimonials-nav" class="btn btn-default">Testimonials</a></li>
+		<li><a href="/index#features" id="features-nav" class="btn btn-default">Features</a></li>
+		<li><a href="/index#get-started" id="get-started-nav" class="btn btn-default">Get Started</a></li>
+		<li><a href="/index#tappfirst-team" id="tappfirst-team-nav" class="btn btn-default">The team</a></li>
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+		<li>
+		<!-- Button trigger modal -->
+		<a href="#" data-toggle="modal" data-target="#signInModal">Sign In</a>
+		</li>
+		<li><a href="/signup">Sign Up</a></li>
+	  </ul>
+	</div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- Modal -->
+<div class="modal fade text-center in" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<div class="modal-title" id="signInModalLabel">
+					<img src="static/img/tappfirst_webpage_old.png" alt="Tappfirst">
+				</div>
+			</div>
+		<div class="modal-body">
+			<form class="form-horizontal" action="dologin" autocomplete="on" method="POST">
+				<div class="form-group">
+					<label for="username" class="control-label">Username</label>
+					<input required id="username" name="username" type="text" class="form-control" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<label for="password" class="control-label">Password</label>
+					<input required id="password" name="password" class="form-control" type="password" placeholder="********">
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12" style="width:100%;">
+					<button id="signin-submit" type="submit" class="btn btn-success">Sign In</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		</div>
+	</div>
+</div>

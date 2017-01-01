@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<section id="signup-container">
+		{% include 'navbar.html' %}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center signup-block">
+					<form id="signup-form" action="dosignup" autocomplete="on" method="POST">
+						<div class="form-group">
+							<label for="emailsignup" class="control-label">Email</label>
+							<input id="emailsignup" name="emailsignup" class="form-control" type="email" placeholder="example@example.com" required>
+						</div>
+						<div class="form-group">
+							<label for="usernamesignup" class="control-label">Username</label>
+							<input id="usernamesignup" name="usernamesignup" class="form-control" type="text" placeholder="Username" required>
+						</div>
+						<div class="form-group">
+							<label for="passwordsignup" class="control-label">Password</label>
+							<input id="passwordsignup" name="passwordsignup" class="form-control" type="password" placeholder="********" required>
+						</div>
+						<div class="form-group">
+							<label for="passwordsignup_confirm" class="control-label">Confirm Password</label>
+							<input id="passwordsignup_confirm" class="form-control" name="passwordsignup_confirm" type="password" placeholder="********" required>
+						</div>
+						<button id="signup-submit" type="submit">Sign Up</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+<script type="text/javascript">
+$(window).ready(function() {
+	setTimeout(function(){ $('#signup-container').addClass('content-loaded'); }, 100);
+});
+</script>
+{% endblock %}

@@ -1,0 +1,526 @@
+{% extends "layout.html" %}
+{% block content %}
+	<section id="intro">
+	{% include 'navbar.html' %}
+		<div class="container intro-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center intro-content">
+					<div class="intro-text">
+						Make your students compete using your own questions
+					</div>
+					<!-- Button trigger modal -->
+					<span type="button" class="glyphicon glyphicon-play-circle btn-watch-video" id="intro-video-button" data-toggle="modal" data-backdrop="static" data-target="#myModal"></span>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog modal-video" role="document">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<div class="row">
+				  <div class="col-md-12 col-md-offset-1">
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				  </div>
+				</div>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe id="intro-video" class="embed-responsive-item" src="//www.youtube.com/embed/bb80p5W0p84?autohide=2&amp;border=0&amp;wmode=opaque&amp;enablejsapi=1&amp;showinfo=0&amp;rel=0" id="youtube-iframe"></iframe>
+				</div>
+			 </div>
+			</div>
+		  </div>
+		</div>
+	</section>
+	<section id="testimonials">
+		<div class="container-fluid text-center">
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<div class="testimonial-content">
+								<blockquote class="testimonial-quote">
+									<p>
+									<span class="testimonial-visible">By using Tappfirst, I could see a significant increase of excitement during class time. The students even ask to play it on a regular basis!</span>
+									<span class="testimonial-hidden">As an English school owner and teacher, I am always looking for ways to make my students more engaged during the lessons and happier so that they'll look forward to coming back to my school. By using Tappfirst, I could see a significant increase of excitement during class time. The students even ask to play it on a regular basis!
+									The fact that students can make their own questions to be used in the game helps them to not only use their creativity which is essential to learning English but also to instantly apply their skills in a fun and engaging way. Since there is no limit to the number or type of questions, Tappfirst can be applied in a variety of ways to a variety of classroom situations. The software is like no other materials I have used during the seventeen years I have taught English in Japan.
+									</span>
+									</p>
+									<a class="testimonial-collapse testimonial-read-more">Read more...</a>
+									<footer>Simon Sakala, owner of the Oasis English school in Japan</footer>
+								</blockquote>
+							</div>
+						</div>
+					  </div>
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-testimonials" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-testimonials" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					  </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="features">
+		<div class="container text-center">
+			<div class="row top-heading-1">
+				<div class="col-xs-12">
+				The best way to motivate and involve your students
+				</div>
+			</div>
+			<div class="row top-heading-2">
+				<div class="col-md-8 col-md-offset-2">
+				Increase your student's interest, focus, and enthusiasm for the material
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-md-6 features-column features-left">
+						<div class="features-content-wrap features-bullets">
+							<span class="glyphicon glyphicon-education features-icon" aria-hidden="true"></span>
+							<div class="features-heading">Introducing a new approach to learning and reviewing</div>
+							<div class="row features-body">
+								<div class="col-md-12">
+									<ol class="list-unstyled text-left">
+										<li>Learn and review by competing against others</li>
+										<li>Transform learning into a fun social game</li>
+										<li>Help students be motivated & excited to learn</li>
+									</ol>
+								</div>
+								<div class="col-md-12">
+									<span class="glyphicon glyphicon-menu-right btn btn-primary"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row features-content-wrap features-description features-out-right features-hidden">
+							<div class="col-md-12">
+								<p>
+								TappFirst introduces competition to learning and reviewing, a simple idea yet surprisingly not put into use in the classroom or even online. Competition drives people to perform better: nobody likes losing in a game or sport. At school, students are able to compete in sports but when it comes to other courses, learning and reviewing often becomes a lonely, tedious and boring task for students. With TappFirst, we want to make learning more fun, effective and social.
+								</p>
+							</div>
+							<div class="col-md-12">
+								<span class="glyphicon glyphicon-menu-left btn btn-primary"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 features-column features-right">
+						<div class="features-content-wrap features-bullets">
+							<span class="glyphicon glyphicon-user features-icon" aria-hidden="true"><span class="glyphicon glyphicon-user features-icon" aria-hidden="true"></span></span>
+							<div class="features-heading">Social, fun and competitive learning</div>
+							<div class="row features-body">
+								<div class="col-md-12">
+									<ol class="list-unstyled text-left">
+										<li>Competition drives people</li>
+										<li>Learning with others is more engaging</li>
+										<li>Competing with peers boosts attention</li>
+									</ol>
+								</div>
+								<div class="col-md-12">
+									<span class="glyphicon glyphicon-menu-right btn btn-primary"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row features-content-wrap features-description features-out-right features-hidden">
+							<div class="col-md-12">
+								<p>
+								With TappFirst, students can learn and review the material taught in class with their peers by competing on a set of questions. Famous TV shows such as Jeopardy employ this idea and the concept is so popular that similar shows have been airing all around the world. Because of the competitive aspect of TappFirst, even students who do not have any interest for the course material start wanting to study more in order to win at the game. Competition also introduces a social aspect to learning and reviewing, which helps in making learning more fun and engaging.
+								</p>
+							</div>
+							<div class="col-md-12">
+								<span class="glyphicon glyphicon-menu-left btn btn-primary"></span>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 features-column features-left">
+					<div class="features-content-wrap features-bullets">
+						<span class="glyphicon glyphicon-pencil features-icon" aria-hidden="true"></span>
+						<div class="features-heading">Create and edit any questions on any subject</div>
+						<div class="row features-body">
+							<div class="col-md-12">
+								<ol class="list-unstyled text-left">
+									<li>Create questions on any subject</li>
+									<li>Choose the number of questions and time limit</li>
+									<li>Use your questions to make your students compete</li>
+								</ol>
+							</div>
+							<div class="col-md-12">
+								<span class="glyphicon glyphicon-menu-right btn btn-primary"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row features-content-wrap features-description features-out-right features-hidden">
+						<div class="col-md-12">
+							<p>
+							As a teacher, you can use TappFirst to test your students on any amount of questions and any subject you want by simply signing up, creating a room and filling in your questions. Then, let your students know which room number corresponds to the set of questions you have made and the game begins. With TappFirst, there is no limit to the amount and variety of questions you want to test your students on. We let you the teachers decide how to use TappFirst, as we believe no software can replace teachers since teachers are irreplaceable. However, we do believe software can serve as a useful tool in learning.
+							</p>
+						</div>
+						<div class="col-md-12">
+							<span class="glyphicon glyphicon-menu-left btn btn-primary"></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 features-column features-right">
+					<div class="features-content-wrap features-bullets">
+						<span class="glyphicon glyphicon-road features-icon" aria-hidden="true"></span>
+						<div class="features-heading">Unlock your student's potential and lead them on the road to success</div>
+						<div class="row features-body">
+							<div class="col-md-12">
+								<ol class="list-unstyled text-left">
+									<li>Competitive learning increases retention</li>
+									<li>Competition pushes students to learn faster</li>
+									<li>Learning is more effective and fun!</li>
+								</ol>
+							</div>
+							<div class="col-md-12">
+								<span class="glyphicon glyphicon-menu-right btn btn-primary"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row features-content-wrap features-description features-out-right features-hidden">
+						<div class="col-md-12">
+							<p>
+							Competition in learning and reviewing introduces a sense of urgency that pushes students to know the material as best as they can since there is no telling when the other peer will pick the right answer first. This introduces a bigger incentive to study and prepare for the quizzes in order to win. Furthermore, it pushes students to retain and know the material more deeply since the sense of urgency pushes users to pick the answer they think is correct as fast as possible without having much time to think. With TappFirst, the goal is not only to make learning more fun and exciting, but also to help students learn faster and more efficiently, ultimately helping them succeed in their learning.
+							</p>
+						</div>
+						<div class="col-md-12">
+							<span class="glyphicon glyphicon-menu-left btn btn-primary"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center features-button">
+				<a href="#get-started" id="get-started-call" class="btn btn-danger big-button">
+				Get started<span class="glyphicon glyphicon-arrow-down"></span>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section id="get-started">
+		<div class="wrapper">
+			<div class="container-fluid text-center">
+				<div class="row">
+					<div id="highlight-pane-2" class="col-md-6">
+						<div class="row">
+							<button id="how-it-works-button" class="btn btn-default">How It Works</span>
+						</div>
+						<div class="row table-steps">
+							<table class="table table-hover">
+							  <tbody>
+								<tr>
+								  <td>Step 1</td><td>Sign Up on TappFirst and create questions</td>
+								</tr>
+								<tr>
+								  <td>Step 2</td><td>Download the App</td>
+								</tr>
+								<tr>
+								  <td>Step 3</td><td>Make your students compete on your quizzes!</td>
+								</tr>
+							  </tbody>
+							</table>
+						</div>
+						<div class="row">
+							<span id="pane-arrow-download" class="glyphicon glyphicon-arrow-right"></span>
+						</div>
+						
+					</div>
+					<div id="highlight-pane-1" class="col-md-6">
+						<div class="row">
+							<div class="col-xs-12">
+								<span class="glyphicon glyphicon-phone"></span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 top-highlight-pane-heading">TappFirst is on IOS and Android</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8 col-xs-offset-2 top-highlight-pane-body">Download TappFirst for your device and start the competition!</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 top-highlight-pane-footer">
+								<ul class="list-unstyled list-inline">
+									<li>
+										<a target="_blank" href="https://itunes.apple.com/us/app/tappfirst/id1007287105?mt=8">
+											<img class="hover-image" src="static/img/app_store_badge.png">
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://play.google.com/store/apps/details?id=com.tappfirst.studentapp&hl=en">
+											<img class="hover-image" src="static/img/play_store_badge.png">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="tappfirst-team">
+		<div class="container text-center">
+			<div class="row top-heading-1">
+				<div class="col-xs-12">
+				<span id="meet-team">Meet the team</span>
+				</div>
+			</div>
+			<div class="row team-content">
+				<div class="col-md-6">
+					<div class="row team-heading">
+						<div class="col-md-8 col-md-offset-2">
+						Founders
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="team-image center-block">
+								<a target="_blank" href="https://www.linkedin.com/pub/jacques-le-normand/16/7b0/a35">
+									<div class="team-image-container" id="ceo-img">
+										<div class="team-image-wrap">
+											<div class="team-linkedIn">View LinkedIn</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 team-name">
+						CEO, Jacques Le Normand
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="row team-heading">
+						<div class="col-md-8 col-md-offset-2">
+						Contributors
+						</div>
+					</div>
+					<div class="row">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="team-image center-block">
+									<a target="_blank" href="https://www.linkedin.com/in/jordanrooks">
+										<div class="team-image-container" id="webmaster-img">
+											<div class="team-image-wrap">
+												<div class="team-linkedIn">View LinkedIn</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 team-name">
+						Webmaster, Jordan Rooks
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="banner-sign-up">
+		<div class="container-fluid text-center">
+			<div class="container-fluid text-center">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 banner-text">
+						<table class="banner-content"><tbody><tr>
+						<td>
+						Sign up your students for the competition now
+						</td>
+						</tr></tbody></table>
+					</div>
+					<div class="col-md-3 banner-button">
+						<table class="banner-content"><tbody><tr>
+						<td>
+							<a href="/signup" id="banner-sign-up-button" class="btn btn-danger">Sign Up</a>
+						</td>
+						</tr></tbody></table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="footer">
+		<div class="container text-left">
+			<div class="row footer-content">
+				<div class="col-md-5 col-md-offset-3">
+					<div class="footer-text footer-header">Company</div>
+					<div class="footer-text footer-link"><a href="#">Company culture</a></div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-text footer-header">Social</div>
+					<div class="footer-text footer-link"><a href="mailto:tappfirst.master@gmail.com">Email us</a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+{% block scriptblock %}
+<script type="text/javascript">
+	function updateActiveLink(newActive)
+	{
+		$($('.navbar .nav > li > a.active')[0]).removeClass('active');
+		newActive.addClass('active');
+	}
+	
+	$(document).ready(function() {
+		$('#tappfirst-navbar').addClass('navbar-fixed-top');
+		updateActiveLink($("#intro-nav"));
+	
+		//Play video on button click
+		$('#intro-video-button').click(function() {
+		  $('#intro-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+		  $('body').toggleClass('modal-black');
+		});
+		$('#myModal').on('hidden.bs.modal', function () {
+			$('#intro-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+			$('body').toggleClass('modal-black');
+			setTimeout(function(){ $('#intro-video-button').blur(); }, 50);
+		});
+		
+		//smooth scroll to internal links navbar
+		$('.navbar .navbar-nav:not(".navbar-right") a[href^="/index#"], .navbar-brand, #get-started-call').on('click',function (e) {
+			e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+						
+			//animate scroll
+			$('html, body').stop().animate({
+				 'scrollTop': $target.offset().top - 75
+			}, 900, 'swing');
+		});
+		
+		//Change navbar to fixed and active link based on verticall scroll
+		var navbar = $($("#intro > .navbar")[0]);
+		var logo = $($(".navbar-brand > img")[0]);
+		$(window).scroll(function() {
+			var windscroll = $(window).scrollTop();
+			if (windscroll >= 50) {
+				navbar.addClass("navbar-default");
+				logo.attr("src","static/img/tappfirst_webpage_old.png");
+				$('body > section').each(function(i,d) {
+					if ($(this).position().top <= $(window).scrollTop() + 200) {
+						updateActiveLink($("#" + d.id + "-nav"));
+					}
+				});
+			} else {
+				navbar.removeClass("navbar-default");
+				logo.attr("src","static/img/tappfirst_webpage.png");
+			}
+		});
+		
+		//Unfocus navbar buttons after click
+		$('.navbar .nav > li > a').click(function() { this.blur() });
+		
+		//Scroll features animation
+		$('.features-column.features-left').addClass("features-hidden").viewportChecker({
+			classToAdd: 'bounceInLeft',
+			classToRemove: 'features-hidden',
+			offset: 150
+		});
+		$('.features-column.features-right').addClass("features-hidden").viewportChecker({
+			classToAdd: 'bounceInRight',
+			classToRemove: 'features-hidden',
+			offset: 150
+		});
+		
+		//Features navigation buttons
+		$('.glyphicon-menu-left, .glyphicon-menu-right').click(function(){
+			var contentWrap = $(this).closest('.features-content-wrap');
+			if($(this).hasClass("glyphicon-menu-right"))
+			{
+				contentWrap.addClass("features-out-left");
+				setTimeout(function(){
+				contentWrap.addClass("features-hidden");
+				var siblingWrap = contentWrap.siblings('.features-content-wrap');
+				siblingWrap.removeClass("features-hidden");
+				siblingWrap.parent().addClass("features-flow-height");
+				setTimeout(function(){ siblingWrap.removeClass("features-out-right"); }, 100);
+				}, 1000);
+			}
+			else
+			{
+				contentWrap.addClass("features-out-right");
+				setTimeout(function(){
+				contentWrap.addClass("features-hidden");
+				var siblingWrap = contentWrap.siblings('.features-content-wrap');
+				siblingWrap.parent().removeClass("features-flow-height");
+				siblingWrap.removeClass("features-hidden");
+				setTimeout(function(){ siblingWrap.removeClass("features-out-left"); }, 100);
+				}, 1000);
+			}
+		});
+		
+		//How it works button
+		$( "#how-it-works-button" ).click(function() {
+			var time = 0;
+			$('#highlight-pane-2 .table tr').each(function(i,elmt) {
+				setTimeout(function(){ $(elmt).addClass('hover'); }, 200 * (i+1));
+				setTimeout(function(){ $(elmt).removeClass('hover'); }, 300 * (i+1));
+				time = 300 * i;
+			});
+			time += 500;
+			setTimeout(function(){ $('#pane-arrow-download').addClass('hover'); }, time);
+			setTimeout(function(){ $('#pane-arrow-download').removeClass('hover'); }, time + 1000);
+			time += 1000;
+			setTimeout(function(){ $('#highlight-pane-1').addClass('hover'); }, time);
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[0]).addClass('hover'); }, time + 400);
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[0]).removeClass('hover'); }, time + 800);
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[1]).addClass('hover'); }, time + 1000);
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[1]).removeClass('hover'); }, time + 1400);
+			setTimeout(function(){ $('#highlight-pane-1').removeClass('hover'); }, time + 1600);
+		});
+		$('#pane-arrow-download').click(function() {
+			$('#highlight-pane-1').addClass('hover');
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[0]).addClass('hover'); }, 400);
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[0]).removeClass('hover'); }, 800);
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[1]).addClass('hover'); }, 1000);
+			setTimeout(function(){ $($('#highlight-pane-1 .hover-image')[1]).removeClass('hover'); }, 1400);
+			setTimeout(function(){ $('#highlight-pane-1').removeClass('hover'); }, 1600);
+		});
+		
+		//Testimonial collapse
+		$('.testimonial-collapse').click(function(){
+			var visible = $(this).parent().find('.testimonial-visible');
+			var hidden = $(this).parent().find('.testimonial-hidden');
+			visible.attr('class', 'testimonial-hidden');
+			hidden.attr('class', 'testimonial-visible');
+			if($(this).hasClass( "testimonial-read-more" ))
+			{
+				$(this).removeClass("testimonial-read-more");
+				$(this).addClass("testimonial-read-less");
+				$(this).text("Read less...");
+			}
+			else
+			{
+				$(this).removeClass("testimonial-read-less");
+				$(this).addClass("testimonial-read-more");
+				$(this).text("Read more...");
+			}
+		});
+
+		function bsCarouselAnimHeight()
+		{
+			$('.carousel').carousel({
+				interval: 5000
+			}).on('slide.bs.carousel', function (e)
+			{
+				var nextH = $(e.relatedTarget).height();
+				var carouselInner = $(this).find('.active.item').parent();
+				carouselInner.animate({ height: nextH }, 500);
+				setTimeout(function(){ carouselInner.css('height','auto'); }, 600);
+			});
+		}
+		bsCarouselAnimHeight();
+	});
+	</script>
+{% endblock %}

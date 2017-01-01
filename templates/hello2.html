@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+  <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 15px;
+    }
+    th {
+    text-align: left;
+    }
+    table {
+    border-spacing: 5px;
+    }
+  </style>
+</head>
+
+<h1> hello {{username}} </h1>
+     <title>Upload new File</title>
+    <h1>Your questions as a csv file</h1> 
+    <form action="uploadfile" method=post enctype=multipart/form-data>
+<input type="hidden" name="username" value="{{username}}">
+      <p><input type=file name=file>
+         <input type=submit value=Upload>
+    </form>
+ 
+{% if names %}
+    <table>
+      <tr><th>Question</th><th>Correct answer</th><th colspan="10">Incorrect answers</th>
+    {% for name in names %}
+<tr>
+    {% for n in name %}
+    <td> {{ n }} </td>
+    {% endfor %}
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<h1>No data yet</h1>
+{% endif %}

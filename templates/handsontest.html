@@ -1,0 +1,171 @@
+{% extends "interfaceLayout.html" %}
+{% block content %}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand">Tappfirst</a>
+	</div>
+
+	<div id="navbar" class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li><button type="button" class="btn btn-default navbar-btn" id="save">Save</button></li>
+			<li><a href="list">Back</a></li>
+			<li>
+				<p class="navbar-text">
+				<div id="msgid" class="navbar-text">	     
+				{% if roomNumber == -1 %}
+
+				{% else %}
+				Room number {{roomNumber}}
+				{% endif %}
+				</div>
+				</p>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="/index">Log out</a></li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+	<h1>Question input</h1>
+	<p>This is where you input the questions you want to use in your quiz battles. After you press the 'Save' button at the top of the page for the first time, a room number will appear at the top of the page. Use this room number to download the quiz onto your tablet.</p>
+
+
+<form class="form-horizontal" role="form">
+
+  <div class="form-group">
+    <label class="control-label col-sm-2">Room name</label>
+    <div class="col-sm-10">
+      <input type="text" name="roomname" id="roomname" class="form-control" value="{{ roomname }}"/><br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2">Winning score</label>
+    <div class="col-sm-10">
+      <input type="text" name="pointsToWin" id="pointsToWin" class="form-control" value="{{ pointsToWin }}"/><br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2">Page to show before</label>
+    <div class="col-sm-10">
+      <input type="text" name="pageUrl" id="pageUrl" class="form-control" value="{{ pageUrl }}"/><br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2">Page time (seconds)</label>
+    <div class="col-sm-10">
+      <input type="text" name="pageTime" id="pageTime" class="form-control" value="{{ pageTime }}"/><br>
+    </div>
+  </div>
+  
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Randomize questions:</label>
+
+    <div class="col-sm-10">
+      <input type="checkbox" name="randomized" id="randomized" {% if randomized %} checked {% endif %}/>
+    </div>
+  </div>
+</form>    
+
+<br><br>
+<div id="hot"></div>
+<div class="rowLayout">
+          <div class="descLayout">
+            <div class="pad" data-jsfiddle="example1">
+              <p>
+
+              </p>
+              <div id="example1"></div>
+            </div>
+          </div>
+          <div class="codeLayout">
+            <div class="pad">
+
+              <script>
+
+var
+  $ = function(id) {
+      return document.getElementById(id);
+},
+
+  container = $('example1'),
+  exampleConsole = $('example1console'),
+save = $('save'),
+  roomNumber = {{ roomNumber|safe }},
+  objectId = "{{ objectId|safe }}",
+hot;
+
+hot = new Handsontable(container, {
+data: {{ data|safe}},
+
+startRows: 8,
+
+minCols: 5,
+startCols: 5,
+maxCols : 5,
+colHeaders: ['Question', 'Answer', 'Wrong answer #1', 'Wrong answer #2', 'Wrong answer #3'],
+  rowHeaders: true,
+  minSpareRows: 1,
+contextMenu: true
+});
+
+Handsontable.Dom.addEvent(save, 'click', function() {
+// save all cell's data
+console.log(document.getElementById("roomname").value);
+$("msgid").innerHTML = "saving...";
+jQuery.post('json/save.json', {data: JSON.stringify(hot.getData()),
+roomName:document.getElementById("roomname").value,
+randomized:document.getElementById("randomized").checked,
+pointsToWin:document.getElementById("pointsToWin").value,
+pageUrl:document.getElementById("pageUrl").value,
+pageTime:document.getElementById("pageTime").value,
+roomNumber: roomNumber,
+objectId:objectId},
+function (res) {
+var response = JSON.parse(res);
+
+console.log(response);
+
+if(objectId == '') {
+console.log(response.objectId);
+objectId = response.objectId;
+}
+if(roomNumber == -1) {
+  roomNumber = response.roomNumber;
+  $("msgid").innerHTML = "Room number: " + response.roomNumber;
+} else {
+  $("msgid").innerHTML = "Room number: " + roomNumber;
+}
+
+
+//    if (response.result === 'ok') {
+//       console.log('Data saved');
+//    }
+//    else {
+//      console.log('Save error');
+//    }
+
+});
+});
+
+</script>
+  </div>
+          </div>
+        </div>
+  </div>
+{% endblock %}
